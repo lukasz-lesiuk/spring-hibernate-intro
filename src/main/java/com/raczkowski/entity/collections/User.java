@@ -16,8 +16,10 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(name = "NAME")
+
+    @Column(name = "NAME", unique = true)
     private String firstName;
+
     private String lastName;
 
     @GenericGenerator(name = "increment", strategy = "increment")

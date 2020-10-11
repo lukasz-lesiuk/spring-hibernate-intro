@@ -1,5 +1,8 @@
 package com.raczkowski;
 
+import com.raczkowski.entity.inheritance.SuperCar;
+import com.raczkowski.entity.inheritance.TwoWheeler;
+import com.raczkowski.entity.inheritance.Vehicle;
 import com.raczkowski.entity.onetomany.Customer;
 import com.raczkowski.entity.onetomany.Order;
 import com.raczkowski.repository.*;
@@ -135,13 +138,13 @@ public class App {
 //            carRepository.saveAll(tomekCars);
 
 
-//            Vehicle vehicle = new Vehicle("Vehicle");
-//            Vehicle bugatti = new SuperCar("Bugatti", 420);
-//            Vehicle kross = new TwoWheeler("Kross", 3);
-//
-//            vehicleRepository.save(vehicle);
-//            vehicleRepository.save(bugatti);
-//            vehicleRepository.save(kross);
+            Vehicle vehicle = new Vehicle("Vehicle");
+            Vehicle bugatti = new SuperCar("Bugatti", 420);
+            Vehicle kross = new TwoWheeler("Kross", 3);
+
+            vehicleRepository.save(vehicle);
+            vehicleRepository.save(bugatti);
+            vehicleRepository.save(kross);
 
 //            Order order1 = new Order(20, new Date());
 //            Order order2 = new Order(50, new Date());
